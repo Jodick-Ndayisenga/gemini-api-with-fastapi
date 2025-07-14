@@ -1,0 +1,12 @@
+### Test GET /
+GET http://127.0.0.1:9000/
+
+### Test POST /chat
+POST http://127.0.0.1:9000/chat
+Content-Type: application/json
+
+{
+  "message": "Hello, how are you?",
+  "history": [],
+  "model_name": "gemini-2.5-flash"
+}
