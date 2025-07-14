@@ -1,4 +1,4 @@
-# Rumenyi - Agricultural AI Assistant
+# Rufuku - Agricultural AI Assistant
 
 ## Overview
 Rumenyi is a multilingual digital agricultural assistant powered by Google's Gemini AI, designed specifically for small-scale farmers in Burundi. The assistant provides personalized agronomic advice, disease management guidance, and soil analysis support in multiple languages including Kirundi, French, Swahili, and English.
