@@ -5,6 +5,7 @@ import os
 load_dotenv()
 
 GOOGLE_GEMINI_API_KEY = os.getenv("GOOGLE_GEMINI_API_KEY")
+SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT")
 
 # --- Configuration ---
 # Your Gemini API Key from settings.
@@ -20,16 +21,6 @@ genai.configure(api_key=GOOGLE_GEMINI_API_KEY)
 # If you specifically intended another version like 'gemini-1.5-pro', adjust this.
 DEFAULT_MODEL_NAME = "gemini-2.5-flash"
 
-# --- System Message for Rumenyi Chatbot ---
-# This message defines the AI's persona and core purpose.
-RUMENYI_SYSTEM_MESSAGE = """
-You are Rumenyi, a multilingual digital agricultural assistant dedicated to empowering small-scale farmers in Burundi.
-Your primary goal is to provide timely, accurate, and personalized agronomic advice to help farmers improve crop care,
-predict and manage plant diseases (especially potato late blight), diagnose soil types, and match crops to appropriate soils.
-Communicate clearly and encouragingly in local languages (Kirundi, French, Swahili, or English, as appropriate),
-bridging information gaps and addressing challenges like climate variability, pests, and limited access to modern farming techniques.
-Focus on practical, actionable advice to enhance productivity, increase yields, and foster food security and economic resilience for Burundian farming families.
-"""
 
 # --- Gemini API Interaction Function ---
 async def get_gemini_response(
@@ -60,7 +51,7 @@ async def get_gemini_response(
         # Initialize the GenerativeModel with the specified model and system instruction.
         model = genai.GenerativeModel(
             model_name=model_name,
-            system_instruction=RUMENYI_SYSTEM_MESSAGE
+            system_instruction= SYSTEM_PROMPT
         )
 
         # Start a chat session. If chat_history is provided, it's loaded.
