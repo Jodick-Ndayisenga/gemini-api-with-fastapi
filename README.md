@@ -29,7 +29,7 @@ Rumenyi is a multilingual digital agricultural assistant powered by Google's Gem
 ### Local Development
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Jodick-Ndayisenga/gemini-api-with-fastapi.git
    cd gardien-vert/genai
    ```
 
@@ -85,6 +85,7 @@ Rumenyi is a multilingual digital agricultural assistant powered by Google's Gem
 
 ## Environment Variables
 - `GOOGLE_GEMINI_API_KEY`: Your Google Gemini API key (required)
+- `SYSTEM_PROMPT`: Your system prompt for the Gemini AI model (required)
 
 ## Development
 
